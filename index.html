@@ -132,15 +132,12 @@
       <div class="status-indicator" id="sensor-0">...</div>
     </div>
     <script>
-
       const eraWidget = new EraWidget();
       let realtimeConfigs = new Array(1).fill(null);
       let actionConfigs = new Array(2).fill(null);
       let isConfigured = false;
 
       eraWidget.init({
-        needHistoryConfigs: true,
-
         onConfiguration: (configuration) => {
           console.log("E-Ra Configuration received:", configuration);
           if (configuration.realtime_configs?.[0]) {
